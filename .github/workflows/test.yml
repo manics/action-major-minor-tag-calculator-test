@@ -24,7 +24,7 @@ jobs:
         uses: docker/build-push-action@v1
         with:
           repository: action-major-minor-tag-calculator-test
-          tags: ${{ join(fromJson(gettags.outputs.tags)) }}
+          tags: ${{ join(fromJson(steps.gettags.outputs.tags)) }}
           push: false
 
       - name: List Docker images
