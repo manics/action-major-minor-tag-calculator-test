@@ -15,7 +15,7 @@ jobs:
       # https://github.com/manics/action-major-minor-tag-calculator-test
       - name: Get other tags
         id: gettags
-        uses: manics/action-major-minor-tag-calculator-test@main
+        uses: manics/action-major-minor-tag-calculator@main
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
 
