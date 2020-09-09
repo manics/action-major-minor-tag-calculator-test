@@ -18,12 +18,12 @@ jobs:
         uses: manics/action-major-minor-tag-calculator@main
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
+          prefix: "action-major-minor-tag-calculator-test:"
 
       # https://github.com/docker/build-push-action
       - name: Build Docker image
-        uses: docker/build-push-action@v1
+        uses: docker/build-push-action@v2
         with:
-          repository: action-major-minor-tag-calculator-test
           tags: ${{ join(fromJson(steps.gettags.outputs.tags)) }}
           push: false
 
