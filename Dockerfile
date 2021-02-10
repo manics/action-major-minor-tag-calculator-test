@@ -1,3 +1,3 @@
 FROM busybox
 
-RUN echo 4
+RUN echo 5
