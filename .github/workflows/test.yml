@@ -4,9 +4,9 @@ on:
   pull_request:
   push:
     # Remove branches if you only want tags
-    # Does this match branches/with/slashes ?
+    # "*" doesn't match branches/with/slashes
     branches:
-      - "*"
+      - "**"
     tags:
       - "*"
 
