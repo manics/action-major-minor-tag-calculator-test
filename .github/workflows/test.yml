@@ -21,10 +21,11 @@ jobs:
       # https://github.com/manics/action-major-minor-tag-calculator-test
       - name: Get other tags
         id: gettags
-        uses: manics/action-major-minor-tag-calculator@main
+        uses: manics/action-major-minor-tag-calculator@branchRegex
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           prefix: "manics/action-major-minor-tag-calculator-test:"
+          branchRegex: "^[^/]+$"
 
       - name: Display tags
         run: echo "${{ steps.gettags.outputs.tags }}"
